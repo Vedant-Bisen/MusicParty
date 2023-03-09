@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %} 
+
+{% block title %}View Playlist{% endblock title%} 
+
+{% block body %}
+<h1>{{ls.name}}</h1>
+<h2>{{ls.description}}</h2>
+<ul>
+  {% for songs in songs %} 
+  <li>{{ songs }}</li>
+  {% endfor %}
+</ul>
+{% endblock body %}

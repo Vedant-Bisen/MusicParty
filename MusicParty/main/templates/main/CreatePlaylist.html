@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% block title %}Create Playlist{% endblock title %}
+{% block body %}
+<form method = "POST" action="/listplaylists/">
+{% csrf_token %}
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}

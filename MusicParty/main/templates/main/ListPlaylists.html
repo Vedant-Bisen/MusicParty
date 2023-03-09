@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block title %}List of playlists{% endblock title %}
+
+{% block body %}
+    <h1>List of playlists</h1>
+    <ul>
+        {% for playlist in playlists %}
+            <li><a href="/viewplaylist/{{playlist.id}}">{{ playlist.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock body %}
